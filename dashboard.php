@@ -1,38 +1,42 @@
 <?php include 'config.php';
 is_logged_in(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="mn">
 
 <head>
+    <meta charset="UTF-8">
+    <title>Админ удирдлага</title>
     <style>
         body {
-            background: #f4f7f6;
+            font-family: sans-serif;
+            background: #eef2f3;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: Arial;
+            margin: 0;
         }
 
-        .dashboard {
+        .dashboard-card {
             background: white;
-            padding: 50px;
-            border-radius: 15px;
-            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             width: 350px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
         }
 
         .btn {
             display: block;
-            margin: 10px 0;
             padding: 15px;
-            background: #fff;
-            border: 1px solid #3498db;
+            margin: 12px 0;
+            background: white;
             color: #3498db;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
+            border: 1px solid #3498db;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .btn:hover {
@@ -43,11 +47,12 @@ is_logged_in(); ?>
 </head>
 
 <body>
-    <div class="dashboard">
+    <div class="dashboard-card">
         <h1>Админ удирдлага</h1>
         <a href="manage_menu.php" class="btn">Цэс удирдах</a>
+        <a href="manage_skills.php" class="btn">Ур чадвар удирдах</a>
         <a href="manage_news.php" class="btn">Мэдээ удирдах</a>
-        <a href="logout.php" style="color: #666; text-decoration: none;">Гарах</a>
+        <a href="logout.php" style="color: #666; text-decoration: none; font-size: 14px;">Гарах</a>
     </div>
 </body>
 
